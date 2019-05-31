@@ -1,5 +1,5 @@
 ﻿#scene
-image mainMenu = "main_menu.jpg"
+image mainMenu = "main_menu.png"
 
 image jp_arrive = "jean_arrive.jpg"
 image port = "port_nuit.jpg"
@@ -63,7 +63,7 @@ image singed_enerve = "sg_enerve.png"
 image miss = "miss.png"
 
 image odin = "odin.png"
-image odin_crayon = "odin_crayon.png"
+image odin_crayon = "odin_crayon.jpg"
 
 image censurebite = "censurebite.png"
 
@@ -198,6 +198,7 @@ hide jp_couleur
 hide urgo
 
 show bras
+voice "sword_slash.ogg"
 play sound "niktamer.ogg"
 
 "Avant de lui trancher le bras gauche d'un grand coup de sabre."
@@ -404,7 +405,6 @@ voice "sg_1.8.ogg"
 singed "Tu as quelque peu changé Jean Plank."
 
 
-show jp_couleur
 play sound "tiens_voila_tes_30_dollards.ogg"
 jp "Tiens voilà tes 30 dollars !"
 
@@ -420,20 +420,18 @@ jp "Qu'est ce donc là que cette choserie ?"
 
 voice "sg_1.10.ogg"
 singed "C'est une potion d'invincibilité."
-hide singed
 
 
-hide jp_couleur
-show jp_en_avant
+
 voice "jp_scene4.8.ogg"
 jp "L'invincibilité ça aide à faire payer !"
-hide jp_en_avant
 play music "musique_taverne.ogg"
 
 "Jean Plank et Saint Gède conclurent finalement leur transaction par l'alcool."
 "Le Rhum coula à flot (aux frais de Saint Gède bien sûr)."
 "Ils burent aussi quelques tonneaux du sang du Christ."
 "Après beaucoup, mais alors beaucoup de litres, Jean Plank tomba finalement ivre mort sur le sol collant de coulures de vin de l'entrepôt de Saint Gède."
+hide singed
 
 stop music
 
@@ -597,19 +595,16 @@ play sound "the_sayen_struggle.ogg"
 "Il rammassa MissFourtout..."
 "D'un geste puissant, il la souleva au dessus de lui,"
 "Et prit appui sur le sol."
-
+window hide
 scene digital_paint
-#play sound the_sayen_struggle.ogg
-""
-voice "explosion_poudre.ogg"
+pause
+voice "explosion_meteor.ogg"
 scene meteor_end
-
-""
+pause
 scene ecrant_noir
-
 stop music
-
-""
+pause
+window show
 "Jean Plank regarda autour de lui :"
 
 scene ruines
@@ -675,7 +670,7 @@ scene meteor_kimi
 "Il était trop tard."
 "Jean Plank ne savait que faire."
 "Tout était perdu."
-voice "explosion_poudre.ogg"
+voice "explosion_meteor.ogg"
 play sound "rien.ogg"
 scene meteor_end
 
@@ -741,50 +736,50 @@ hide odin
 stop music
 play music "Crayon.ogg"
 
-show jp_crayon2
+show jp_crayon
 voice "jp_scene6.5.ogg"
 jp "Odin, j'ai une vengeance à accomplir."
-hide jp_crayon2
+hide jp_crayon
 
 show odin_crayon
 voice "Odin1.5.ogg"
 odin "Mais tu es mort Jean Plank, il t'est désormais impossible de retourner dans le monde des vivants."
 hide odin_crayon
 
-show jp_crayon2
+show jp_crayon
 voice "jp_scene6.6.ogg"
 jp "Mais il suffirait que tu me donnes tes pouvoirs."
-hide jp_crayon2
+hide jp_crayon
 
 show odin_crayon
 voice "Odin1.6.ogg"
 odin "Jean, je ne peux... Mes responsabilités..."
 hide odin_crayon
 
-show jp_crayon2
+show jp_crayon
 voice "jp_scene6.7.ogg"
 jp "Ne t'en fais pas, je ferais de toi un gueux."
-hide jp_crayon2
+hide jp_crayon
 
 show odin_crayon
 voice "Odin1.7.ogg"
 odin "Mais Jean..."
 hide odin_crayon
 
-show jp_crayon2
+show jp_crayon
 voice "jp_scene6.8.ogg"
 jp "Od', c'est un sacrifice nécessaire."
-hide jp_crayon2
+hide jp_crayon
 
 show odin_crayon
 voice "Odin1.8.ogg"
 odin "Nécessaire ?"
 hide odin_crayon
 
-show jp_crayon2
+show jp_crayon
 voice "jp_scene6.9.ogg"
 jp "Oui. Pour notre gloire éternelle."
-hide jp_crayon2
+hide jp_crayon
 
 show odin_crayon
 voice "Odin1.9.ogg"
